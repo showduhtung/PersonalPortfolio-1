@@ -1,0 +1,99 @@
+$backgroundColor: #000000;
+$textColor: #ffffff;
+/*
+@font-face {
+  font-family: "Helvetica Black";
+  src: url(../assets/Helvetica-Black.otf) format: "opentype";
+}
+
+@font-face {
+  font-family: "Campton";
+  src: url(../assets/Campton-BoldDEMO.otf) format: "opentype";
+}
+
+@font-face {
+  font-family: "Zona";
+  src: url(../assets/Zona.otf) format: "opentype";
+}*/
+
+// @import '../assets/_mixins.scss';
+// @include font-face("Helvetica Black", "../assets/Helvetica-Black.otf");
+
+
+body {
+  height: 100%;
+  width: 100%;
+
+  background: black;
+
+  background: -moz-linear-gradient(left, #000000 0%, #434343 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(left, #000000 0%, #434343 100%); /* Chrome10-25,Safari5.1-6 */
+  background: -webkit-linear-gradient(#000000 0%, #434343 100%);
+  background: linear-gradient(to left, #000000 0%, #434343 100%);
+  // background: black;
+
+
+
+
+  color: $textColor;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 16px;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+.home {
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  top: 40%;
+}
+
+.catchHeadline {
+  font-family: "Helvetica Neue";
+  font-weight: bold;
+  font-size: 38px;
+  &.ibuildapps {
+    width: 100%;
+    text-align: center;
+    margin: 0;
+    padding-right: 50px;
+  }
+}
+
+.name {
+  width: 100%;
+  text-align: center;
+  margin-top: 0;
+  padding-left: 50px;
+}
+
+nav {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  a {
+    margin: 0 1em;
+  }
+  &.topNav {
+    background-color: black;
+    height: 50px;
+  }
+}
+
+.resume {
+  width: 100%;
+  text-align: center;
+}
+
+.footer {
+  position: fixed;
+  width: 100%;
+  text-align: center;
+  bottom: 0%;
+}

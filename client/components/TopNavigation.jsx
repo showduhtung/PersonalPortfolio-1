@@ -1,15 +1,14 @@
 import React from 'react';
 import {withRouter, Link} from 'react-router';
-import Chaffle from 'chaffle';
 
-class Navigation extends React.Component {
+class TopNavigation extends React.Component {
   constructor(props) {
     super(props);
   }
 
   render() {
     return (
-      <nav>
+      <nav className="topNav">
         <Link to="/">Home</Link>
         <Link to="/projects">Projects</Link>
         <Link to="/skills">Skills</Link>
@@ -19,4 +18,4 @@ class Navigation extends React.Component {
   }
 }
 
-export default withRouter(Navigation)
+export default withRouter(TopNavigation)
