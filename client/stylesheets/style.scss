@@ -29,25 +29,9 @@ body {
   height: 100%;
   width: 100%;
 
-  background: black;
-  // deep space
-  // background: -moz-linear-gradient(left, #000000 0%, #434343 100%); /* FF3.6-15 */
-  // background: -webkit-linear-gradient(left, #000000 0%, #434343 100%);
-  // background: -webkit-linear-gradient(#000000 0%, #434343 100%);
-  // background: linear-gradient(to left, #000000 0%, #434343 100%);
-  // // background: black;
-
-
-// blue
-// background: #E6DADA; /* fallback for old browsers */
-// background: -webkit-linear-gradient(to left, #E6DADA , #274046);
-// background: linear-gradient(to left, #E6DADA , #274046); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
-
-
-background: #ECE9E6; /* fallback for old browsers */
-background: -webkit-linear-gradient(to left, #ECE9E6 , #FFFFFF);
-background: linear-gradient(to left, #dcd8d6 , #FFFFFF); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: #dcd8d6; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to left, #dcd8d6, #FFFFFF);
+  background: linear-gradient(to left, #dcd8d6 , #FFFFFF); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
 
   color: $textColor;
@@ -58,6 +42,7 @@ background: linear-gradient(to left, #dcd8d6 , #FFFFFF); /* W3C, IE 10+/ Edge, F
 a {
   color: $navColor;
   &:hover {
+    cursor: pointer;
     text-decoration: none;
   }
 }
@@ -113,7 +98,6 @@ header {
   height: 60px;
   top: 0%;
   color: $navColor;
-  z-index: 10;
   h2 {
     margin: 0;
     text-align: center;
@@ -151,6 +135,7 @@ nav {
   right: 0%;
   bottom: 0%;
   margin: 0em 3em;
+  z-index: 1000;
   img {
     margin-right: 0.2em;
   }
@@ -168,6 +153,9 @@ nav {
   -moz-animation-name: bounce;
   -o-animation-name: bounce;
   animation-name: bounce;
+  &:hover {
+    cursor: pointer;
+  }
 }
 .animated{
   -webkit-animation-fill-mode:both;

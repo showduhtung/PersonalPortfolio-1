@@ -12,7 +12,7 @@ export default class Projects extends React.Component {
     return (
       <section>
         <TopNavigation/>
-        <h1 className="box1">Projects</h1>
+        <h1 id="projects">Projects</h1>
         <div className="box2">
           <h2>Virtual Reality Pacman</h2>
           <a href="http://vrpacman.com" target="_blank">live</a>

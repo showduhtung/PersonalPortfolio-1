@@ -20,14 +20,53 @@ ReactDOM.render(
   </Router>,
   document.getElementById('app'));
 
-let stickyTop = $('#stickyBanner').offset().top;
-$(window).on( 'scroll', function(){
-    if ($(window).scrollTop() >= stickyTop) {
-      $('#stickyBanner').clone().addClass('clone').appendTo('.navAnchor');
-      $('.clone').removeAttr('id');
-      $('#stickyBanner').css({position: "fixed", top: "0px", width: "100%"});
-    } else {
-      $('#stickyBanner').css({position: "relative", top: "0px"});
-      $('.clone').remove();
-    }
-  });
+let $stickyBanner = $('#stickyBanner');
+let stickyTop = $stickyBanner.offset().top;
+let $window = $(window);
+let $projects = $('#projects');
+let $stickyHeight = $stickyBanner.height();
+$window.on( 'scroll', function(){
+  if ($window.scrollTop() >= stickyTop) {
+    $stickyBanner.css({position: "fixed", top: "0%", width: "100%", 'z-index': '999'});
+    $projects.css('margin-top', $stickyHeight);
+  } else {
+    $stickyBanner.css({position: "relative", top: "0px"});
+    $projects.css('margin-top', '0');
+  }
+});
+
+// function sticky_relocate() {
+//   var window_top = $(window).scrollTop();
+//   var div_top = $('#stickyBanner').offset().top;
+//   if (window_top >= div_top) {
+//     $('#stickyBanner').css({position: "fixed", top: "0%", width: "100%"});
+//   }
+//   else {
+//     console.log('hit');
+//     $('#stickyBanner').css({position: "relative", top: "0%", width: "100%"});
+//   }
+// }
+
+// let $window = $(window);
+// $window.on('scroll', () => {
+//   let window_top = $(window).scrollTop();
+//   let div_top = $('#stickyBanner').offset().top;
+//   if (window_top >= div_top) {
+//     $('#stickyBanner').css({position: "fixed", top: "0%", width: "100%"});
+//   } else {
+//     console.log('hit');
+//     $('#stickyBanner').css({position: "relative", top: "0%", width: "100%"});
+//   }
+// })
+
+// $(window).scroll(() => {
+//   let window_top = $(window).scrollTop();
+//   let div_top = $('#stickyBanner').offset().top;
+//   if (window_top >= div_top) {
+//     $('#stickyBanner').css({position: "fixed", top: "0%", width: "100%"});
+//   }
+//   else {
+//     console.log('hit');
+//     $('#stickyBanner').css({position: "relative", top: "0%", width: "100%"});
+//   }
+// })

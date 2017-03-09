@@ -84,6 +84,12 @@ export default class Home extends React.Component {
     sr.reveal('.box2', config2);
   }
 
+  scrollClick() {
+    let pos = $('#projects').offset().top - $('#stickyBanner').height();
+    $(window).scrollTop(pos);
+  }
+
+
   render() {
     return (
       <div className="main">
@@ -92,27 +98,19 @@ export default class Home extends React.Component {
           <h3 className="name">Wells Z. Tsai</h3>
           <Navigation/>
           <div className="navAnchor">
-            <p className="scrollDown animated bounce">SCROLL<span className="glyphicon glyphicon-menu-down"></span>
+            <p className="scrollDown animated bounce" onClick={this.scrollClick}>SCROLL<span className="glyphicon glyphicon-menu-down"></span>
             </p>
             <span className="socialIcons scrollDown">
-              <img src="../client/assets/email.svg" type="image/svg+xml" height="35em"/>
-              <img src="../client/assets/linkedin.png" height="55em"/>
-              <img src="../client/assets/github.svg" type="image/svg+xml" height="30em"/>
+              <a href="mailto:wells.z.tsai@gmail.com" target="_blank" title="wells.z.tsai@gmail.com"><img src="../client/assets/email.svg" type="image/svg+xml" height="35em"/></a>
+              <a href="http://linkedin.com/in/wells-tsai" target="_blank" title="Wells' LinkedIn Profile"><img src="../client/assets/linkedin.png" height="55em"/></a>
+              <a href="http://github.com/wellstsai" target="_blank" title="Wells' Github Profile"><img src="../client/assets/github.svg" type="image/svg+xml" height="30em"/></a>
             </span>
           </div>
         </div>
         <Projects/>
         <Skills/>
         <Resume/>
-        <About/>
+        <About id="about"/>
       </div>)
   }
 }
-
-// window.onclick = () => {
-//   let $name = $('.name');
-//   $name.css('display','block')
-//   let $nav = $('nav');
-//   $nav.css('display','block')
-
-// }

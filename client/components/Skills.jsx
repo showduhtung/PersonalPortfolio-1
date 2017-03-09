@@ -5,7 +5,7 @@ const Skills = () => {
 
   return (
     <section>
-      <h1 className="box2">Skills</h1>
+      <h1 className="box2" id="skills">Skills</h1>
     </section>)
 }
 
