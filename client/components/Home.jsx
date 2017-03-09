@@ -92,7 +92,7 @@ export default class Home extends React.Component {
           <h3 className="name">Wells Z. Tsai</h3>
           <Navigation/>
           <Footer/>
-          <div className="navAnchor"><p className="scrollDown">SCROLL<span className="glyphicon glyphicon-menu-down"></span></p></div>
+          <div className="navAnchor"><p className="scrollDown animated bounce">SCROLL<span className="glyphicon glyphicon-menu-down"></span></p></div>
         </div>
         <Projects/>
         <Skills/>
