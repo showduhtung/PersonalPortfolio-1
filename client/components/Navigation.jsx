@@ -8,6 +8,7 @@ export default class Navigation extends React.Component {
   }
 
   navClick (e) {
+    e.preventDefault();
     let clicked = e.target.innerHTML;
     let stickyHeight = $('#stickyBanner').height();
     let stickyHeightCopy = stickyHeight;
@@ -20,7 +21,7 @@ export default class Navigation extends React.Component {
     }
     if (clicked === 'Home') {
       let pos = 0;
-      $window.scrollTop(0);
+      $('html').animate({scrollTop: 0}, 1000, 'slow');
     }
     else if (clicked === 'Projects') {
       let pos = $('#projects').offset().top - stickyHeightCopy;
