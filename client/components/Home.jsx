@@ -91,8 +91,15 @@ export default class Home extends React.Component {
           <h1 className="catchHeadline ibuildapps" data-chaffle="en">i build apps.</h1>
           <h3 className="name">Wells Z. Tsai</h3>
           <Navigation/>
-          <Footer/>
-          <div className="navAnchor"><p className="scrollDown animated bounce">SCROLL<span className="glyphicon glyphicon-menu-down"></span></p></div>
+          <div className="navAnchor">
+            <p className="scrollDown animated bounce">SCROLL<span className="glyphicon glyphicon-menu-down"></span>
+            </p>
+            <span className="socialIcons scrollDown">
+              <img src="../client/assets/email.svg" type="image/svg+xml" height="35em"/>
+              <img src="../client/assets/linkedin.png" height="55em"/>
+              <img src="../client/assets/github.svg" type="image/svg+xml" height="30em"/>
+            </span>
+          </div>
         </div>
         <Projects/>
         <Skills/>

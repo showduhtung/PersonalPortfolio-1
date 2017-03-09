@@ -5,7 +5,6 @@ const About = () => {
 
   return (
     <section>
-      <TopNavigation/>
       <h1>About</h1>
     </section>)
 }

@@ -5,7 +5,6 @@ const Skills = () => {
 
   return (
     <section>
-      <TopNavigation/>
       <h1 className="box2">Skills</h1>
     </section>)
 }
