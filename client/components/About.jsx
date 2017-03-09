@@ -4,10 +4,10 @@ import TopNavigation from './TopNavigation.jsx';
 const About = () => {
 
   return (
-    <div>
+    <section>
       <TopNavigation/>
       <h1>About</h1>
-    </div>)
+    </section>)
 }
 
 export default About;

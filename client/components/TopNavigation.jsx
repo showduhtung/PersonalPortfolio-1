@@ -8,13 +8,16 @@ class TopNavigation extends React.Component {
 
   render() {
     return (
-      <nav className="topNav">
-        <Link to="/">Home</Link>
-        <Link to="/projects">Projects</Link>
-        <Link to="/skills">Skills</Link>
-        <Link to="/resume">Resume</Link>
-        <Link to="/about">About</Link>
-      </nav>);
+      <header className="header" id="stickyBanner">
+        <h2>Wells Z. Tsai</h2>
+        <nav className="topNav">
+          <Link to="/">Home</Link>
+          <Link to="/projects">Projects</Link>
+          <Link to="/skills">Skills</Link>
+          <Link to="/resume">Resume</Link>
+          <Link to="/about">About</Link>
+        </nav>
+      </header>);
   }
 }
 

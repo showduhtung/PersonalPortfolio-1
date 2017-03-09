@@ -19,3 +19,15 @@ ReactDOM.render(
     <Route path='/about' component={About}/>
   </Router>,
   document.getElementById('app'));
+
+let stickyTop = $('#stickyBanner').offset().top;
+$(window).on( 'scroll', function(){
+    if ($(window).scrollTop() >= stickyTop) {
+      $('#stickyBanner').clone().addClass('clone').appendTo('.navAnchor');
+      $('.clone').removeAttr('id');
+      $('#stickyBanner').css({position: "fixed", top: "0px", width: "100%"});
+    } else {
+      $('#stickyBanner').css({position: "relative", top: "0px"});
+      $('.clone').remove();
+    }
+  });

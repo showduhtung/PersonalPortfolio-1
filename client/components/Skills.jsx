@@ -4,10 +4,10 @@ import TopNavigation from './TopNavigation.jsx';
 const Skills = () => {
 
   return (
-    <div>
+    <section>
       <TopNavigation/>
-      <h1>Skills</h1>
-    </div>)
+      <h1 className="box2">Skills</h1>
+    </section>)
 }
 
 export default Skills;

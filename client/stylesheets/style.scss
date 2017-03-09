@@ -1,5 +1,7 @@
 $backgroundColor: #000000;
-$textColor: #ffffff;
+$textColor: #232323;
+$navColor: #232323;
+// #232323 gray
 /*
 @font-face {
   font-family: "Helvetica Black";
@@ -19,20 +21,33 @@ $textColor: #ffffff;
 // @import '../assets/_mixins.scss';
 // @include font-face("Helvetica Black", "../assets/Helvetica-Black.otf");
 
+::-webkit-scrollbar {
+  display: none;
+}
 
 body {
   height: 100%;
   width: 100%;
 
   background: black;
+  // deep space
+  // background: -moz-linear-gradient(left, #000000 0%, #434343 100%); /* FF3.6-15 */
+  // background: -webkit-linear-gradient(left, #000000 0%, #434343 100%);
+  // background: -webkit-linear-gradient(#000000 0%, #434343 100%);
+  // background: linear-gradient(to left, #000000 0%, #434343 100%);
+  // // background: black;
 
-  background: -moz-linear-gradient(left, #000000 0%, #434343 100%); /* FF3.6-15 */
-  background: -webkit-linear-gradient(left, #000000 0%, #434343 100%); /* Chrome10-25,Safari5.1-6 */
-  background: -webkit-linear-gradient(#000000 0%, #434343 100%);
-  background: linear-gradient(to left, #000000 0%, #434343 100%);
-  // background: black;
+
+// blue
+// background: #E6DADA; /* fallback for old browsers */
+// background: -webkit-linear-gradient(to left, #E6DADA , #274046);
+// background: linear-gradient(to left, #E6DADA , #274046); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
 
+
+background: #ECE9E6; /* fallback for old browsers */
+background: -webkit-linear-gradient(to left, #ECE9E6 , #FFFFFF);
+background: linear-gradient(to left, #dcd8d6 , #FFFFFF); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
 
   color: $textColor;
@@ -40,26 +55,46 @@ body {
   font-size: 16px;
 }
 
-a:hover {
-  text-decoration: none;
+a {
+  color: $navColor;
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.main {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  section {
+    height: 100%;
+  }
 }
 
 .home {
-  position: absolute;
+  position: relative;
   text-align: center;
   width: 100%;
-  top: 40%;
+  height: 100%;
+  top: 35%;
+  p {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    bottom: 35%;
+    margin: 0;
+  }
 }
 
 .catchHeadline {
   font-family: "Helvetica Neue";
   font-weight: bold;
-  font-size: 38px;
+  font-size: 48px;
   &.ibuildapps {
     width: 100%;
     text-align: center;
     margin: 0;
-    padding-right: 50px;
+    // padding-right: 70px;
   }
 }
 
@@ -67,7 +102,20 @@ a:hover {
   width: 100%;
   text-align: center;
   margin-top: 0;
-  padding-left: 50px;
+  padding-left: 120px;
+  font-size: 22px;
+}
+
+header {
+  background: black;
+  height: 60px;
+  top: 0%;
+  color: $navColor;
+  z-index: 10;
+  h2 {
+    margin: 0;
+    text-align: center;
+  }
 }
 
 nav {
@@ -81,8 +129,12 @@ nav {
     margin: 0 1em;
   }
   &.topNav {
-    background-color: black;
-    height: 50px;
+    a {
+      color: white;
+    }
+  }
+  &.bottomNav {
+    margin-top: 40px;
   }
 }
 
@@ -94,6 +146,6 @@ nav {
 .footer {
   position: fixed;
   width: 100%;
-  text-align: center;
+  text-align: right;
   bottom: 0%;
 }

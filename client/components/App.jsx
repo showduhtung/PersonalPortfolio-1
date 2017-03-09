@@ -1,6 +1,11 @@
 import React from 'react';
 import Navigation from './Navigation.jsx';
 import Home from './Home.jsx';
+import Projects from './Projects.jsx';
+
+import '../reveal.js';
+
+
 
 export default class App extends React.Component {
   constructor(props) {
@@ -12,6 +17,7 @@ export default class App extends React.Component {
       <div>
         <Home/>
         <Navigation/>
+        <div>testing</div>
       </div>);
   }
 }

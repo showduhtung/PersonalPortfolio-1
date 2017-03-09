@@ -9,7 +9,7 @@ class Navigation extends React.Component {
 
   render() {
     return (
-      <nav>
+      <nav className="bottomNav">
         <Link to="/">Home</Link>
         <Link to="/projects">Projects</Link>
         <Link to="/skills">Skills</Link>
