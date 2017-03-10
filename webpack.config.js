@@ -26,7 +26,9 @@ module.exports = {
       { test: /\.scss$/, loader: "style-loader!raw-loader!sass-loader?includePaths[]=" + path.resolve(__dirname, "./node_modules/compass-mixins/lib") }
     ]
   },
-  plugins: [HtmlWebpackPluginConfig, webpackpluginConfig],
+  plugins: [HtmlWebpackPluginConfig, webpackpluginConfig, new webpack.LoaderOptionsPlugin({
+    debug: true
+  })],
   devServer: {
     port: 8080,
     historyApiFallback: true

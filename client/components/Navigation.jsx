@@ -32,19 +32,21 @@ export default class Navigation extends React.Component {
       }, scrollSpeed);
     }
     else if (clicked === 'Skills') {
-      let pos = $('#skills').offset().top - stickyHeight;
+      let pos = $('#skills').offset().top - stickyHeightCopy;
       $root.animate({
         scrollTop: pos
       }, scrollSpeed);
     }
     else if (clicked === 'Resume') {
-      let pos = $('#resume').offset().top - stickyHeight;
+      let pos = $('#resume').offset().top - (stickyHeight*2) - $('#resume').innerHeight();
+      console.log('pos', pos);
       $root.animate({
         scrollTop: pos
       }, scrollSpeed);
     }
     else if (clicked === 'About') {
-      let pos = $('#about').offset().top - stickyHeight;
+      let pos = $('#about').offset().top - (stickyHeight*2) - $('#about').innerHeight();
+      console.log('pos', pos);
       $root.animate({
         scrollTop: pos
       }, scrollSpeed);

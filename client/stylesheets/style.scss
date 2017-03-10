@@ -99,6 +99,15 @@ a {
         color: white;
       }
     }
+    &.skills {
+      color: white;
+      background-color: #114357; // Old browsers
+      @include filter-gradient(#114357, #F29492, horizontal); // IE6-9
+      @include background-image(linear-gradient(left, #114357 0%, #F29492 100%));
+      a {
+        color: white;
+      }
+    }
   }}
 
 .home {

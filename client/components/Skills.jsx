@@ -4,7 +4,7 @@ import TopNavigation from './TopNavigation.jsx';
 const Skills = () => {
 
   return (
-    <section>
+    <section className="skills">
       <h1 className="box2" id="skills">Skills</h1>
     </section>)
 }
