@@ -25,6 +25,8 @@ let stickyTop = $stickyBanner.offset().top;
 let $window = $(window);
 let $projects = $('#projects');
 let $stickyHeight = $stickyBanner.height();
+let $socialIcons = $('.socialIcons');
+let $whiteIcons = $('#whiteIcons');
 $window.on( 'scroll', function(){
   if ($window.scrollTop() >= stickyTop) {
     $stickyBanner.css({'position': "fixed", top: "0%", width: "100%", 'z-index': '999'});
@@ -34,9 +36,12 @@ $window.on( 'scroll', function(){
     $projects.css('margin-top', '0');
   }
   if ($window.scrollTop() >= 50) { // 55px is linkedin logo's height
-    $('.socialIcons').css('display', 'none');
+    $socialIcons.css('display', 'none');
+    $whiteIcons.css('display', 'inline');
   } else {
-    $('.socialIcons').css('display', 'initial');
+    $socialIcons.css('display', 'initial');
+    $whiteIcons.css('display', 'none');
+
   }
 });
 

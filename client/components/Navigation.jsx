@@ -8,36 +8,46 @@ export default class Navigation extends React.Component {
   }
 
   navClick (e) {
-    e.preventDefault();
     let clicked = e.target.innerHTML;
     let stickyHeight = $('#stickyBanner').height();
     let stickyHeightCopy = stickyHeight;
     let $stickyBanner = $('#stickyBanner');
     let stickyTop = $stickyBanner.offset().top;
     let $window = $(window);
-
+    let $root = $('html, body');
+    let scrollSpeed = 1000;
     if ($('#projects').css('margin-top') === '0px') {
       stickyHeight = 0;
     }
     if (clicked === 'Home') {
       let pos = 0;
-      $('html').animate({scrollTop: 0}, 1000, 'slow');
+      $root.animate({
+        scrollTop: pos
+      }, scrollSpeed);
     }
     else if (clicked === 'Projects') {
       let pos = $('#projects').offset().top - stickyHeightCopy;
-      $window.scrollTop(pos);
+      $root.animate({
+        scrollTop: pos
+      }, scrollSpeed);
     }
     else if (clicked === 'Skills') {
       let pos = $('#skills').offset().top - stickyHeight;
-      $window.scrollTop(pos);
+      $root.animate({
+        scrollTop: pos
+      }, scrollSpeed);
     }
     else if (clicked === 'Resume') {
       let pos = $('#resume').offset().top - stickyHeight;
-      $window.scrollTop(pos);
+      $root.animate({
+        scrollTop: pos
+      }, scrollSpeed);
     }
     else if (clicked === 'About') {
       let pos = $('#about').offset().top - stickyHeight;
-      $window.scrollTop(pos);
+      $root.animate({
+        scrollTop: pos
+      }, scrollSpeed);
     }
 
   }

@@ -1,3 +1,5 @@
+@import "compass";
+@import "compass/functions";
 $backgroundColor: #000000;
 $textColor: #232323;
 $navColor: #232323;
@@ -28,15 +30,44 @@ $navColor: #232323;
 body {
   height: 100%;
   width: 100%;
-
-  background: #dcd8d6; /* fallback for old browsers */
-  background: -webkit-linear-gradient(to left, #dcd8d6, #FFFFFF);
-  background: linear-gradient(to left, #dcd8d6 , #FFFFFF); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
-
   color: $textColor;
   font-family: 'Quicksand', sans-serif;
   font-size: 16px;
+
+  // clouds gradient
+  background-color: #ece9e6; // Old browsers
+  @include filter-gradient(#ece9e6, #FFFFFF, horizontal); // IE6-9
+  @include background-image(linear-gradient(left, #ece9e6 0%, #FFFFFF 100%));
+
+  //sunset gradient
+  // background-color: #ffb347; // Old browsers
+  //     @include filter-gradient(#ffb347, #ffcc33 , horizontal); // IE6-9
+  //     @include background-image(linear-gradient(left, #ffb347 0%, #ffcc33  100%));
+
+  //dark purple gradient
+  // background-color: #41295a; // Old browsers
+  //     @include filter-gradient(#41295a, #2F0743 , horizontal); // IE6-9
+  //     @include background-image(linear-gradient(left, #41295a 0%, #2F0743  100%));
+
+  //twitch purple
+  // background-color: #6441A5; // Old browsers
+  //     @include filter-gradient(#6441A5, #2a0845, horizontal); // IE6-9
+  //     @include background-image(linear-gradient(left, #6441A5 0%, #2a0845 100%));
+
+  //pizlex usethis
+  // background-color: #114357; // Old browsers
+  //     @include filter-gradient(#114357, #F29492, horizontal); // IE6-9
+  //     @include background-image(linear-gradient(left, #114357 0%, #F29492 100%));
+
+  //royal blue
+  // background-color: #141E30; // Old browsers
+  //     @include filter-gradient(#141E30, #243B55, horizontal); // IE6-9
+  //     @include background-image(linear-gradient(left, #141E30 0%, #243B55 100%));
+
+  //dusk usethis maybe
+  // background-color: #ffd89b; // Old browsers
+  //     @include filter-gradient(#ffd89b, #19547b, horizontal); // IE6-9
+  //     @include background-image(linear-gradient(left, #ffd89b 0%, #19547b 100%));
 }
 
 a {
@@ -51,10 +82,24 @@ a {
   position: absolute;
   height: 100%;
   width: 100%;
+  text-align: center;
   section {
     height: 100%;
-  }
-}
+    h1 {
+      display: inline-block;
+      padding-top: 0.4em;
+      border-bottom: 1px solid;
+    }
+    &.projects {
+      color: white;
+      background-color: #41295a; // Old browsers
+      @include filter-gradient(#41295a, #2F0743 , horizontal); // IE6-9
+      @include background-image(linear-gradient(left, #41295a 0%, #2F0743  100%));
+      a {
+        color: white;
+      }
+    }
+  }}
 
 .home {
   position: relative;
@@ -101,6 +146,7 @@ header {
   h2 {
     margin: 0;
     text-align: center;
+
   }
 }
 
@@ -143,6 +189,7 @@ nav {
 
 #whiteIcons {
   position: absolute;
+  display: none;
   filter: invert(1);
   right: 0%;
   transform: scale(0.7);
@@ -154,6 +201,36 @@ nav {
   width: 100%;
   text-align: right;
   bottom: 0%;
+}
+
+.single-project {
+  margin: 1em 5em;
+  display: flex;
+  justify-content: center;
+  h4 {
+    font-weight: bold;
+    border-bottom: 1px solid;
+  }
+  .leftColumn {
+    display: flex;
+    flex-direction: column;
+    width: 20em;
+    text-align: left;
+    margin: 1.5em;
+  }
+  .rightColumn {
+    margin: 1.5em;
+    left: 0%;
+    width: 30em;
+  }
+  img {
+    border: 1px solid black;
+    border-radius: 10px;
+  }
+  .tech {
+    font-size: 0.85em;
+    color: gray;
+  }
 }
 
 // down arrow animation

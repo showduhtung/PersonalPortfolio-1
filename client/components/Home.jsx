@@ -86,7 +86,9 @@ export default class Home extends React.Component {
 
   scrollClick() {
     let pos = $('#projects').offset().top - $('#stickyBanner').height();
-    $(window).scrollTop(pos);
+    $('html, body').animate({
+        scrollTop: pos
+      }, 1000);
   }
 
 
