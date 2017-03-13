@@ -16,9 +16,6 @@ export default class Navigation extends React.Component {
     let $window = $(window);
     let $root = $('html, body');
     let scrollSpeed = 1000;
-    if ($('#projects').css('margin-top') === '0px') {
-      stickyHeight = 0;
-    }
     if (clicked === 'Home') {
       let pos = 0;
       $root.animate({
@@ -38,15 +35,13 @@ export default class Navigation extends React.Component {
       }, scrollSpeed);
     }
     else if (clicked === 'Resume') {
-      let pos = $('#resume').offset().top - (stickyHeight*2) - $('#resume').innerHeight();
-      console.log('pos', pos);
+      let pos = $('#resume').offset().top - (stickyHeight);
       $root.animate({
         scrollTop: pos
       }, scrollSpeed);
     }
     else if (clicked === 'About') {
-      let pos = $('#about').offset().top - (stickyHeight*2) - $('#about').innerHeight();
-      console.log('pos', pos);
+      let pos = $('#about').offset().top - (stickyHeight);
       $root.animate({
         scrollTop: pos
       }, scrollSpeed);

@@ -4,8 +4,8 @@ import TopNavigation from './TopNavigation.jsx';
 const About = () => {
 
   return (
-    <section>
-      <h1 id="about">About</h1>
+    <section className="about">
+      <h1 id="about" className="box1">About</h1>
     </section>)
 }
 

@@ -84,30 +84,50 @@ a {
   width: 100%;
   text-align: center;
   section {
-    height: 100%;
+    min-height: 100%;
+
     h1 {
       display: inline-block;
-      padding-top: 0.4em;
-      border-bottom: 1px solid;
+      padding: 0.2em;
     }
     &.projects {
-      color: white;
-      background-color: #41295a; // Old browsers
-      @include filter-gradient(#41295a, #2F0743 , horizontal); // IE6-9
-      @include background-image(linear-gradient(left, #41295a 0%, #2F0743  100%));
+      color: black;
+      // background-color: #41295a; // Old browsers
+      // @include filter-gradient(#41295a, #2F0743 , horizontal); // IE6-9
+      // @include background-image(linear-gradient(left, #41295a 0%, #2F0743  100%));
+      background-image: url("../client/assets/cubes.png");
+      background-attachment: fixed;
       a {
         color: white;
       }
     }
     &.skills {
-      color: white;
-      background-color: #114357; // Old browsers
-      @include filter-gradient(#114357, #F29492, horizontal); // IE6-9
-      @include background-image(linear-gradient(left, #114357 0%, #F29492 100%));
+      color: black;
+      // background-color: #114357; // Old browsers
+      // @include filter-gradient(#114357, #F29492, horizontal); // IE6-9
+      // @include background-image(linear-gradient(left, #114357 0%, #F29492 100%));
+      background-image: url("../client/assets/cubes.png");
+      background-attachment: fixed;
       a {
-        color: white;
+        color: black;
       }
     }
+    &.resume {
+      color: black;
+      // background-color: #141E30; // Old browsers
+      // @include filter-gradient(#141E30, #243B55, horizontal); // IE6-9
+      // @include background-image(linear-gradient(left, #141E30 0%, #243B55 100%));
+      background-image: url("../client/assets/cubes.png");
+      background-attachment: fixed;
+    }
+    &.about {
+      color: black;
+      a {
+        color: black;
+      }
+    }
+
+
   }}
 
 .home {
@@ -149,14 +169,17 @@ a {
 
 header {
   background: black;
-  height: 60px;
   top: 0%;
   color: $navColor;
   h2 {
     margin: 0;
     text-align: center;
-
+    color: white;
   }
+}
+
+#stickyBanner {
+  height: 90px;
 }
 
 nav {
@@ -179,6 +202,10 @@ nav {
   }
 }
 
+iframe {
+  margin-top: 1em;
+  margin-bottom: 2em;
+}
 
 .resume {
   width: 100%;
@@ -213,28 +240,38 @@ nav {
 }
 
 .single-project {
-  margin: 1em 5em;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   h4 {
     font-weight: bold;
-    border-bottom: 1px solid;
   }
   .leftColumn {
+    padding: 4em;
     display: flex;
     flex-direction: column;
-    width: 20em;
-    text-align: left;
-    margin: 1.5em;
+    justify-content: center;
+    text-align: center;
+    width: 35%;
   }
   .rightColumn {
-    margin: 1.5em;
+    padding: 2em;
+    display: flex;
+    width: 65%;
     left: 0%;
-    width: 30em;
   }
   img {
-    border: 1px solid black;
+    &.project1 {
+      border: 0.7em solid #735eff;
+    }
+    &.project2 {
+      border: 0.7em solid #f22626;
+    }
+    &.project3 {
+      border: 0.7em solid #6dff8a;
+    }
     border-radius: 10px;
+    width: 100%;
+    align-self: center;
   }
   .tech {
     font-size: 0.85em;
@@ -292,3 +329,56 @@ nav {
   40% {transform: translateY(-10px);}
   60% {transform: translateY(-5px);}
 }
+
+// Skills chart
+svg {
+  border: solid 1px rgba(0, 0, 0, 0.2);
+  border-opacity: 0.5;
+}
+.link {
+    fill: none;
+    stroke: #555;
+    stroke-opacity: 0.4;
+    stroke-width: 1px;
+}
+text {
+    font-family: "Arial Black", Gadget, sans-serif;
+    fill: black;
+    font-weight: bold;
+    font-size: 0.9em;
+}
+
+.xAxis .tick text{
+    fill: black;
+}
+.grid .tick line{
+    stroke: grey;
+    stroke-dasharray: 5, 10;
+    opacity: 0.7;
+}
+.grid path{
+    stroke-width: 0;
+}
+
+.node circle {
+    fill: #999;
+}
+.node--internal circle {
+    fill: #555;
+}
+.node--internal text {
+    font-size: 0.9em;
+    text-shadow: 0 2px 0 #fff, 0 -2px 0 #fff, 2px 0 0 #fff, -2px 0 0 #fff;
+}
+.node--leaf text {
+    font-size: 0.9em;
+    fill: white;
+}
+.ballG text {
+    fill: white;
+}
+
+.shadow {
+    -webkit-filter: drop-shadow( -1.5px -1.5px 1.5px #000 );
+    filter: drop-shadow( -1.5px -1.5px 1.5px #000 );
+  }

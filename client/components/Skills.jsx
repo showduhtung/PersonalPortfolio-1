@@ -1,12 +1,19 @@
 import React from 'react';
 import TopNavigation from './TopNavigation.jsx';
 
-const Skills = () => {
+export default class Skills extends React.Component  {
+  constructor(props) {
+    super(props);
+  }
 
-  return (
-    <section className="skills">
-      <h1 className="box2" id="skills">Skills</h1>
-    </section>)
+  componentDidMount() {
+    require('../skillsChart.js');
+  }
+
+  render() {
+    return (
+      <section className="skills">
+        <svg width="920" height="1000" id="skills"></svg>
+      </section>)
+  }
 }
-
-export default Skills;

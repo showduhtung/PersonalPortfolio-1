@@ -1,6 +1,5 @@
 import React from 'react';
 import Navigation from './Navigation.jsx';
-import Chaffle from 'chaffle';
 import Footer from './Footer.jsx';
 import Projects from './Projects.jsx';
 import Skills from './Skills.jsx';
@@ -10,6 +9,8 @@ require ('../stylesheets/style.scss');
 
 import ScrollReveal from 'scrollreveal';
 window.sr = ScrollReveal();
+import Chaffle from 'chaffle';
+
 
 
 export default class Home extends React.Component {

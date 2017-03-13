@@ -24,6 +24,9 @@ let $stickyBanner = $('#stickyBanner');
 let stickyTop = $stickyBanner.offset().top;
 let $window = $(window);
 let $projects = $('#projects');
+let $skills = $('#skills');
+let $resume = $('#resume');
+let $about = $('#about');
 let $stickyHeight = $stickyBanner.height();
 let $socialIcons = $('.socialIcons');
 let $whiteIcons = $('#whiteIcons');
@@ -41,7 +44,14 @@ $window.on( 'scroll', function(){
   } else {
     $socialIcons.css('display', 'initial');
     $whiteIcons.css('display', 'none');
+  }
+  //background change
+  // if scrolled within skills, fade in background
+  // if scrolled within resume, fade in background
+  // if scrolled to about, fade in background
 
+  if ($window.scrollTop() >= $projects.offset().top) {
+    // $('.projects, .skills, .resume').css({"background-image": "url(../client/assets/cubes.png)", "background-attachment": "fixed"});
   }
 });
 
