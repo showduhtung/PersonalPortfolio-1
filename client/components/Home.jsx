@@ -9,7 +9,6 @@ require ('../stylesheets/style.scss');
 
 import ScrollReveal from 'scrollreveal';
 window.sr = ScrollReveal();
-import Chaffle from 'chaffle';
 
 
 
@@ -17,25 +16,23 @@ export default class Home extends React.Component {
 
 
   componentDidMount() {
-    // randomize text animation
-    let elements = document.querySelectorAll('[data-chaffle]');
-    Array.prototype.forEach.call(elements, function (el) {
-      let chaffle = new Chaffle(el, {
-        lang: 'en',
-        speed: 5,
-        delay: 250
-      });
-      chaffle.init();
-    });
 
     // fade in text animation
+    let $headline = $('.catchHeadline');
+    $headline.css('opacity', '0');
+    window.requestAnimationFrame(() => {
+      setTimeout(() => {
+        $headline.css('transition', 'opacity 6000ms');
+        $headline.css('opacity', '1');
+      }, 0)
+    })
     let $name = $('.name');
     $name.css('opacity', '0');
     window.requestAnimationFrame(() => {
       setTimeout(() => {
         $name.css('transition', 'opacity 6000ms');
         $name.css('opacity', '1');
-      }, 2300)
+      }, 200)
     })
     let $bottomNav = $('.bottomNav');
     let $footer = $('.footer');
@@ -52,7 +49,7 @@ export default class Home extends React.Component {
         $footer.css('opacity', '1');
         $scrollDown.css('transition', 'opacity 6000ms');
         $scrollDown.css('opacity', '1');
-      }, 4200)
+      }, 2000)
     })
 
     // scroll reveal
@@ -97,7 +94,7 @@ export default class Home extends React.Component {
     return (
       <div className="main">
         <div className="home">
-          <h1 className="catchHeadline ibuildapps" data-chaffle="en">i build apps.</h1>
+          <h1 className="catchHeadline ibuildapps">i build apps.</h1>
           <h3 className="name">Wells Z. Tsai</h3>
           <Navigation/>
           <div className="navAnchor">

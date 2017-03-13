@@ -121,6 +121,7 @@ a {
       background-attachment: fixed;
     }
     &.about {
+      min-height: 87%;
       color: black;
       a {
         color: black;
@@ -276,6 +277,19 @@ iframe {
   .tech {
     font-size: 0.85em;
     color: gray;
+  }
+}
+
+.aboutContainer {
+  .aboutme {
+    display: inline-block;
+    vertical-align: top;
+    width: 50%;
+  }
+  .contact {
+    display: inline-block;
+    width: 50%;
+
   }
 }
 
