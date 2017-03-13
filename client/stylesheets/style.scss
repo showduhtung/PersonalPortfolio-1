@@ -121,7 +121,7 @@ a {
       background-attachment: fixed;
     }
     &.about {
-      min-height: 87%;
+      min-height: 100%;
       color: black;
       a {
         color: black;
@@ -280,16 +280,55 @@ iframe {
   }
 }
 
+$contactFormWidth: 70%;
+
 .aboutContainer {
-  .aboutme {
-    display: inline-block;
-    vertical-align: top;
+  width: 100%;
+  .aboutPics {
+    width: 100%;
+    text-align: center;
+    span {
+      padding: 0.4em;
+    }
+  }
+  .blurbContactContainer {
+    display: flex;
+  }
+  .aboutBlurb {
+    padding-left: 7em;
     width: 50%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    vertical-align: top;
+    text-align: left;
   }
   .contact {
-    display: inline-block;
+    display: inline;
     width: 50%;
 
+  }
+  label {
+    width: $contactFormWidth;
+    text-align: left;
+  }
+  input[type="text"] {
+    width: $contactFormWidth;
+    border: none;
+    border-radius: 3px;
+  }
+  textarea {
+    width: $contactFormWidth;
+    border: none;
+    border-radius: 3px;
+  }
+  .submit {
+    width: $contactFormWidth;
+    display: inline-block;
+    // right: 0%;
+  }
+  input[type="submit"] {
+    float: right;
   }
 }
 
