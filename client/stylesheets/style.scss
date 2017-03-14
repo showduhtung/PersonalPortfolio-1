@@ -70,6 +70,20 @@ body {
   //     @include background-image(linear-gradient(left, #ffd89b 0%, #19547b 100%));
 }
 
+
+#backgroundObjects {
+  position:fixed;
+  height: 100%;
+  width: 100%;
+  #wzt {
+    height: 158%;
+    position: absolute;
+    opacity: 0.05;
+    top: -20%;
+    left: 18%;
+  }
+}
+
 a {
   color: $navColor;
   &:hover {

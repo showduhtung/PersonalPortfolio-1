@@ -10,6 +10,7 @@ import Skills from './components/Skills.jsx';
 import Resume from './components/Resume.jsx';
 import About from './components/About.jsx';
 
+
 ReactDOM.render(
   <Router history={browserHistory}>
     <Route path='/' component={Home}/>
