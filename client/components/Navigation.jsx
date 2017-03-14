@@ -39,7 +39,7 @@ export default class Navigation extends React.Component {
         scrollTop: pos
       }, scrollSpeed);
     }
-    else if (clicked === 'About') {
+    else if (clicked === 'About' || clicked === 'Contact') {
       let pos = $('#about').offset().top - (stickyHeight);
       $root.animate({
         scrollTop: pos
@@ -56,6 +56,7 @@ export default class Navigation extends React.Component {
         <a onClick={this.navClick}>Skills</a>
         <a onClick={this.navClick}>Resume</a>
         <a onClick={this.navClick}>About</a>
+        <a onClick={this.navClick}>Contact</a>
       </nav>);
   }
 }

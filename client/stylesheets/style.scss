@@ -75,6 +75,7 @@ body {
   position:fixed;
   height: 100%;
   width: 100%;
+  z-index: 1;
   #wzt {
     height: 158%;
     position: absolute;
@@ -99,7 +100,6 @@ a {
   text-align: center;
   section {
     min-height: 100%;
-
     h1 {
       display: inline-block;
       padding: 0.2em;
@@ -203,13 +203,28 @@ nav {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
-  align-content: center;
   a {
     margin: 0 1em;
   }
   &.topNav {
+    .left {
+      text-align: left;
+    }
+    .right {
+      text-align: right;
+    }
+    img {
+      // would filter invert but inverts side icons
+    }
+    span {
+      width: 10%;
+    }
     a {
       color: white;
+      margin: 0.2em;
+    }
+    hr {
+      margin: 0.2em;
     }
   }
   &.bottomNav {

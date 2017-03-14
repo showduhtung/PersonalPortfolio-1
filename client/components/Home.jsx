@@ -93,9 +93,6 @@ export default class Home extends React.Component {
   render() {
     return (
       <div className="main">
-        <div id="backgroundObjects">
-          <img id="wzt" src="wztBackground.png"></img>
-        </div>
         <div className="home">
           <h1 className="catchHeadline ibuildapps">i build apps.</h1>
           <h3 className="name">Wells Z. Tsai</h3>
@@ -114,6 +111,9 @@ export default class Home extends React.Component {
         <Skills/>
         <Resume/>
         <About id="about"/>
+        <div id="backgroundObjects">
+          <img id="wzt" src="wztBackground.png"></img>
+        </div>
       </div>)
   }
 }
