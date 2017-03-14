@@ -12,6 +12,10 @@ const webpackpluginConfig = new webpack.ProvidePlugin({
         $: 'jquery',
         jquery: 'jquery'
     })
+const CopyWebpackPlugin = require('copy-webpack-plugin');
+const CopyWebpackPluginConfig = new CopyWebpackPlugin([
+  {from: 'client/assets'}
+])
 
 module.exports = {
   entry: './client/index.js',
@@ -23,12 +27,18 @@ module.exports = {
     loaders: [
       { test: /\.js$/, loader: 'babel-loader', exclude: /node_modules/ },
       { test: /\.jsx$/, loader: 'babel-loader', exclude: /node_modules/ },
+      { test: /\.(jpe?g|gif|png|svg|woff|ttf|wav|mp3)$/, loader: "file" },
+      { test: /\.csv$/, loader: 'dsv-loader' },
       { test: /\.scss$/, loader: "style-loader!raw-loader!sass-loader?includePaths[]=" + path.resolve(__dirname, "./node_modules/compass-mixins/lib") }
     ]
   },
-  plugins: [HtmlWebpackPluginConfig, webpackpluginConfig, new webpack.LoaderOptionsPlugin({
+  plugins: [HtmlWebpackPluginConfig, webpackpluginConfig, CopyWebpackPluginConfig, new webpack.LoaderOptionsPlugin({
     debug: true
-  })],
+  })
+  ,
+  new webpack.optimize.UglifyJsPlugin(),
+  new webpack.optimize.AggressiveMergingPlugin()
+],
   devServer: {
     port: 8080,
     historyApiFallback: true

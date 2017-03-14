@@ -1,6 +1,5 @@
 import React from 'react';
 import {Link} from 'react-router';
-import Chaffle from 'chaffle';
 
 export default class Navigation extends React.Component {
   constructor(props) {

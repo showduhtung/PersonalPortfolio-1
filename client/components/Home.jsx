@@ -101,9 +101,9 @@ export default class Home extends React.Component {
             <p className="scrollDown animated bounce" onClick={this.scrollClick}>SCROLL<span className="glyphicon glyphicon-menu-down"></span>
             </p>
             <span className="socialIcons scrollDown">
-              <a href="mailto:wells.z.tsai@gmail.com" target="_blank" title="wells.z.tsai@gmail.com"><img src="../client/assets/email.svg" type="image/svg+xml" height="35em"/></a>
-              <a href="http://linkedin.com/in/wells-tsai" target="_blank" title="Wells' LinkedIn Profile"><img src="../client/assets/linkedin.png" height="55em"/></a>
-              <a href="http://github.com/wellstsai" target="_blank" title="Wells' Github Profile"><img src="../client/assets/github.svg" type="image/svg+xml" height="30em"/></a>
+              <a href="mailto:wells.z.tsai@gmail.com" target="_blank" title="wells.z.tsai@gmail.com"><img src="email.svg" type="image/svg+xml" height="35em"/></a>
+              <a href="http://linkedin.com/in/wells-tsai" target="_blank" title="Wells' LinkedIn Profile"><img src="linkedin.png" height="55em"/></a>
+              <a href="http://github.com/wellstsai" target="_blank" title="Wells' Github Profile"><img src="github.svg" type="image/svg+xml" height="30em"/></a>
             </span>
           </div>
         </div>

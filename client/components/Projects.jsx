@@ -15,7 +15,7 @@ export default class Projects extends React.Component {
         <TopNavigation/>
         <div id="projects" className="single-project">
           <div className="rightColumn">
-            <img className="project1" src="../client/assets/vrPacmanScreenshot2.png"/>
+            <img className="project1" src="vrPacmanScreenshot2.png"/>
           </div>
           <div className="leftColumn">
             <h4>Virtual Reality Pacman</h4>
@@ -33,13 +33,13 @@ export default class Projects extends React.Component {
             <a href="https://github.com/gitgreat/TubeNotes" target="_blank">- git -</a>
           </div>
           <div className="rightColumn">
-            <img className="project2" src="../client/assets/tubenotesScreenshot1.png"/>
+            <img className="project2" src="tubenotesScreenshot1.png"/>
           </div>
         </div>
 
         <div className="single-project">
           <div className="rightColumn">
-            <img className="project3" src="../client/assets/planthis.png"/>
+            <img className="project3" src="planthis.png"/>
           </div>
           <div className="leftColumn">
             <h4>PlanThis</h4>
@@ -53,5 +53,5 @@ export default class Projects extends React.Component {
   }
 }
 
-//<img src="../client/assets/vrPacmanScreenshot2.png" width="35%"/>
-// <img src="../client/assets/vrPacmanScreenshot.jpg" width="60%"/>
+//<img src="vrPacmanScreenshot2.png" width="35%"/>
+// <img src="vrPacmanScreenshot.jpg" width="60%"/>

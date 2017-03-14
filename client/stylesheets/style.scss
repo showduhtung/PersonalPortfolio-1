@@ -95,7 +95,7 @@ a {
       // background-color: #41295a; // Old browsers
       // @include filter-gradient(#41295a, #2F0743 , horizontal); // IE6-9
       // @include background-image(linear-gradient(left, #41295a 0%, #2F0743  100%));
-      background-image: url("../client/assets/cubes.png");
+      background-image: url("cubes.png");
       background-attachment: fixed;
       a {
         color: white;
@@ -106,7 +106,7 @@ a {
       // background-color: #114357; // Old browsers
       // @include filter-gradient(#114357, #F29492, horizontal); // IE6-9
       // @include background-image(linear-gradient(left, #114357 0%, #F29492 100%));
-      background-image: url("../client/assets/cubes.png");
+      background-image: url("cubes.png");
       background-attachment: fixed;
       a {
         color: black;
@@ -117,7 +117,7 @@ a {
       // background-color: #141E30; // Old browsers
       // @include filter-gradient(#141E30, #243B55, horizontal); // IE6-9
       // @include background-image(linear-gradient(left, #141E30 0%, #243B55 100%));
-      background-image: url("../client/assets/cubes.png");
+      background-image: url("cubes.png");
       background-attachment: fixed;
     }
     &.about {
@@ -289,6 +289,9 @@ $contactFormWidth: 70%;
     text-align: center;
     span {
       padding: 0.4em;
+      img {
+        margin: 0.5em 0em;
+      }
     }
   }
   .blurbContactContainer {
@@ -312,7 +315,7 @@ $contactFormWidth: 70%;
     width: $contactFormWidth;
     text-align: left;
   }
-  input[type="text"] {
+  input[type="text"],input[type="email"] {
     width: $contactFormWidth;
     border: none;
     border-radius: 3px;
