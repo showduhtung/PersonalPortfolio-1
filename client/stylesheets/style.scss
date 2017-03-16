@@ -3,7 +3,9 @@
 $textColor: #232323;
 $navColor: #232323;
 $headlineFont: 'Unica One';
-//Open+Sans|Unica+One|Oleo+Script:700|Quicksand
+$border: solid 0.1em white;
+$borderRadius: 10px;
+//Unica+One|Quicksand
 // #232323 gray
 
 ::-webkit-scrollbar {
@@ -166,8 +168,8 @@ nav {
 iframe {
   margin-top: 1em;
   margin-bottom: 2em;
-  border: solid 0.7em #709bff;
-  border-radius: 10px;
+  border: $border;
+  border-radius: $borderRadius;
 }
 
 .resume {
@@ -235,15 +237,15 @@ iframe {
       cursor: pointer;
     }
     &.project1 {
-      border: 0.7em solid #735eff;
+      border: $border;
     }
     &.project2 {
-      border: 0.7em solid #f22626;
+      border: $border;
     }
     &.project3 {
-      border: 0.7em solid #6dff8a;
+      border: $border;
     }
-    border-radius: 10px;
+    border-radius: $borderRadius;
     width: 100%;
     align-self: center;
   }
@@ -366,7 +368,7 @@ $contactFormWidth: 70%;
 // Skills chart
 svg {
   border: solid 1px rgba(0, 0, 0, 0.2);
-  border-radius: 10px;
+  border-radius: $borderRadius;
   border-opacity: 0.5;
 }
 .link {

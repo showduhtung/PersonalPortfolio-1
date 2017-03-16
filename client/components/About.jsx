@@ -45,9 +45,9 @@ export default class About extends React.Component {
             <div className="aboutBlurb">
               <h3 id="hello">Hello!</h3><br/>
               <p>I'm an enthusiastic and purpose-driven Software Engineer with a passion for building interactive applications. I enjoy learning new technologies and solving interesting technical problems. Currently, I'm seeking new professional opportunities that constructively challenge me and create a positive impact on the world!</p>
-              <p>E-mail: <a href="mailto:wells.z.tsai@gmail.com">wells.z.tsai@gmail.com</a></p>
-              <p>LinkedIn: <a href="http://linkedin.com/in/wells-tsai">http://linkedin.com/in/wells-tsai</a></p>
-              <p>Github: <a href="http://github.com/wellstsai">http://github.com/wellstsai</a></p>
+              <p>E-mail: <a target="_blank" href="mailto:wells.z.tsai@gmail.com">wells.z.tsai@gmail.com</a></p>
+              <p>LinkedIn: <a target="_blank" href="http://linkedin.com/in/wells-tsai">http://linkedin.com/in/wells-tsai</a></p>
+              <p>Github: <a target="_blank" href="http://github.com/wellstsai">http://github.com/wellstsai</a></p>
             </div>
 
             <div className="contact">
