@@ -8,19 +8,20 @@ export default class About extends React.Component {
 
   formSubmit(e) {
     e.preventDefault();
-    // let $contactForm = $('#contactForm')[0];
-    // let formData = new FormData($contactForm);
-    let name = $('#contactName').val();
-    let email = $('#contactEmail').val();
-    let message = $('#contactMessage').val();
-    let formData = {name: name, email: email, message: message};
+    let $name = $('#contactName');
+    let $email = $('#contactEmail');
+    let $message = $('#contactMessage');
+    let formData = {name: $name.val(), email: $email.val(), message: $message.val()};
     console.log('fprmdata', formData);
     $.ajax({
       url: '/contact',
       type: 'POST',
       data: formData,
       success: () => {
-        console.log('success')
+        $name.val('');
+        $email.val('');
+        $message.val('');
+        alert('Your message was sent! =]');
       },
       error: () => {
         console.log('error')
@@ -36,7 +37,7 @@ export default class About extends React.Component {
           <h3>About Me</h3>
           <div className="aboutPics">
             <span><img src="icecave.jpg"/></span>
-            <span><img src="linkedinProfilePic.jpg"/></span>
+            <span><img src="linkedinprofilepic.jpg"/></span>
             <span><img src="monkeyimitation.jpg"/></span>
           </div>
 

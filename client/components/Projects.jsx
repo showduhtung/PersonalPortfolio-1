@@ -43,7 +43,7 @@ export default class Projects extends React.Component {
         <h3 id="projects">Projects</h3>
         <div id="projects" className="single-project">
           <div className="rightColumn">
-            <a href="http://vrpacman.com" target="_blank"><img className="project1" src="vrPacmanScreenshot2.png"/></a>
+            <a href="http://vrpacman.com" target="_blank"><img className="project1" src="vrpacmanscreenshot2.png"/></a>
           </div>
           <div className="leftColumn box1">
             <h4>VIRTUAL REALITY PACMAN</h4>
