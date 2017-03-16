@@ -1,27 +1,10 @@
 @import "compass";
 @import "compass/functions";
-$backgroundColor: #000000;
 $textColor: #232323;
 $navColor: #232323;
+$headlineFont: 'Unica One';
+//Open+Sans|Unica+One|Oleo+Script:700|Quicksand
 // #232323 gray
-/*
-@font-face {
-  font-family: "Helvetica Black";
-  src: url(../assets/Helvetica-Black.otf) format: "opentype";
-}
-
-@font-face {
-  font-family: "Campton";
-  src: url(../assets/Campton-BoldDEMO.otf) format: "opentype";
-}
-
-@font-face {
-  font-family: "Zona";
-  src: url(../assets/Zona.otf) format: "opentype";
-}*/
-
-// @import '../assets/_mixins.scss';
-// @include font-face("Helvetica Black", "../assets/Helvetica-Black.otf");
 
 ::-webkit-scrollbar {
   display: none;
@@ -32,61 +15,28 @@ body {
   width: 100%;
   color: $textColor;
   font-family: 'Quicksand', sans-serif;
-  font-size: 16px;
+  font-size: 1.6em;
 
   // clouds gradient
   background-color: #ece9e6; // Old browsers
   @include filter-gradient(#ece9e6, #FFFFFF, horizontal); // IE6-9
   @include background-image(linear-gradient(left, #ece9e6 0%, #FFFFFF 100%));
-
-  //sunset gradient
-  // background-color: #ffb347; // Old browsers
-  //     @include filter-gradient(#ffb347, #ffcc33 , horizontal); // IE6-9
-  //     @include background-image(linear-gradient(left, #ffb347 0%, #ffcc33  100%));
-
-  //dark purple gradient
-  // background-color: #41295a; // Old browsers
-  //     @include filter-gradient(#41295a, #2F0743 , horizontal); // IE6-9
-  //     @include background-image(linear-gradient(left, #41295a 0%, #2F0743  100%));
-
-  //twitch purple
-  // background-color: #6441A5; // Old browsers
-  //     @include filter-gradient(#6441A5, #2a0845, horizontal); // IE6-9
-  //     @include background-image(linear-gradient(left, #6441A5 0%, #2a0845 100%));
-
-  //pizlex usethis
-  // background-color: #114357; // Old browsers
-  //     @include filter-gradient(#114357, #F29492, horizontal); // IE6-9
-  //     @include background-image(linear-gradient(left, #114357 0%, #F29492 100%));
-
-  //royal blue
-  // background-color: #141E30; // Old browsers
-  //     @include filter-gradient(#141E30, #243B55, horizontal); // IE6-9
-  //     @include background-image(linear-gradient(left, #141E30 0%, #243B55 100%));
-
-  //dusk usethis maybe
-  // background-color: #ffd89b; // Old browsers
-  //     @include filter-gradient(#ffd89b, #19547b, horizontal); // IE6-9
-  //     @include background-image(linear-gradient(left, #ffd89b 0%, #19547b 100%));
+  background-image: url("wztBackgroundOpacity5.png");
+  background-repeat: no-repeat;
+  background-position: 0% 0%;
 }
 
-
-#backgroundObjects {
-  position:fixed;
-  height: 100%;
-  width: 100%;
-  z-index: 1;
-  #wzt {
-    height: 158%;
-    position: absolute;
-    opacity: 0.05;
-    top: -20%;
-    left: 18%;
-  }
+h3 {
+  font-family: $headlineFont;
+  font-weight: bold;
+  text-align: left;
+  font-size: 3em;
+  margin: 0 1.5em 0.4em 1em;
+  padding-top: 0.5em;
 }
 
 a {
-  color: $navColor;
+  color: $textColor;
   &:hover {
     cursor: pointer;
     text-decoration: none;
@@ -104,45 +54,20 @@ a {
       display: inline-block;
       padding: 0.2em;
     }
-    &.projects {
+    a {
       color: black;
-      // background-color: #41295a; // Old browsers
-      // @include filter-gradient(#41295a, #2F0743 , horizontal); // IE6-9
-      // @include background-image(linear-gradient(left, #41295a 0%, #2F0743  100%));
-      background-image: url("cubes.png");
+    }
+    &.projects, &.skills, &.resume {
+      color: $textColor;
+      background-image: url("wztBackgroundOpacity5.png"),url("cubes.png");
+      background-repeat: no-repeat, initial;
       background-attachment: fixed;
+    }
+    &.projects {
       a {
         color: white;
       }
     }
-    &.skills {
-      color: black;
-      // background-color: #114357; // Old browsers
-      // @include filter-gradient(#114357, #F29492, horizontal); // IE6-9
-      // @include background-image(linear-gradient(left, #114357 0%, #F29492 100%));
-      background-image: url("cubes.png");
-      background-attachment: fixed;
-      a {
-        color: black;
-      }
-    }
-    &.resume {
-      color: black;
-      // background-color: #141E30; // Old browsers
-      // @include filter-gradient(#141E30, #243B55, horizontal); // IE6-9
-      // @include background-image(linear-gradient(left, #141E30 0%, #243B55 100%));
-      background-image: url("cubes.png");
-      background-attachment: fixed;
-    }
-    &.about {
-      min-height: 100%;
-      color: black;
-      a {
-        color: black;
-      }
-    }
-
-
   }}
 
 .home {
@@ -161,7 +86,7 @@ a {
 }
 
 .catchHeadline {
-  font-family: "Helvetica Neue";
+  font-family: $headlineFont;
   font-weight: bold;
 
   font-size: 3em;
@@ -169,7 +94,6 @@ a {
     width: 100%;
     text-align: center;
     margin: 0;
-    // padding-right: 70px;
   }
 }
 
@@ -177,15 +101,17 @@ a {
   width: 100%;
   text-align: center;
   margin-top: 0;
+  padding-top: 0;
   padding-left: 120px;
   font-size: 22px;
   font-size: 1.4em;
+  border: none;
 }
 
 header {
-  background: black;
+  background: $navColor;
   top: 0%;
-  color: $navColor;
+  color: $textColor;
   h2 {
     margin: 0;
     text-align: center;
@@ -194,7 +120,7 @@ header {
 }
 
 #stickyBanner {
-  height: 90px;
+  height: 110px;
 }
 
 nav {
@@ -207,17 +133,21 @@ nav {
     margin: 0 1em;
   }
   &.topNav {
+    height: 100%;
     .left {
       text-align: left;
     }
     .right {
       text-align: right;
     }
-    img {
-      // would filter invert but inverts side icons
+    .logo {
+      margin: 0.5em 1em;
     }
     span {
-      width: 10%;
+      width: 8%;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
     }
     a {
       color: white;
@@ -225,6 +155,7 @@ nav {
     }
     hr {
       margin: 0.2em;
+      padding-bottom: 2.1em;
     }
   }
   &.bottomNav {
@@ -235,6 +166,8 @@ nav {
 iframe {
   margin-top: 1em;
   margin-bottom: 2em;
+  border: solid 0.7em #709bff;
+  border-radius: 10px;
 }
 
 .resume {
@@ -254,12 +187,15 @@ iframe {
 }
 
 #whiteIcons {
+  width: initial;
   position: absolute;
   display: none;
   filter: invert(1);
   right: 0%;
-  transform: scale(0.7);
-  top: 27%;
+  margin-right: 2.6em;
+  transform: scale(0.9);
+  top: 24%;
+  height: 100%;
 }
 
 .footer {
@@ -273,7 +209,9 @@ iframe {
   display: flex;
   justify-content: space-between;
   h4 {
+    font-size: 1.5em;
     font-weight: bold;
+    border-bottom: 1px solid;
   }
   .leftColumn {
     padding: 4em;
@@ -289,7 +227,13 @@ iframe {
     width: 65%;
     left: 0%;
   }
+  a {
+    width: 100%;
+  }
   img {
+    &:hover {
+      cursor: pointer;
+    }
     &.project1 {
       border: 0.7em solid #735eff;
     }
@@ -364,6 +308,10 @@ $contactFormWidth: 70%;
   }
 }
 
+#hello {
+  margin-left: 0;
+}
+
 // down arrow animation
 .bounce {
   -webkit-animation-name: bounce;
@@ -418,6 +366,7 @@ $contactFormWidth: 70%;
 // Skills chart
 svg {
   border: solid 1px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
   border-opacity: 0.5;
 }
 .link {

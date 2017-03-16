@@ -33,11 +33,15 @@ module.exports = {
     ]
   },
   plugins: [HtmlWebpackPluginConfig, webpackpluginConfig, CopyWebpackPluginConfig, new webpack.LoaderOptionsPlugin({
-    debug: true
+    debug: false
   })
   ,
   new webpack.optimize.UglifyJsPlugin(),
-  new webpack.optimize.AggressiveMergingPlugin()
+  new webpack.optimize.AggressiveMergingPlugin(), new webpack.DefinePlugin({
+  'process.env': {
+    NODE_ENV: JSON.stringify('production')
+  }
+})
 ],
   devServer: {
     port: 8080,

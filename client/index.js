@@ -39,7 +39,7 @@ $window.on( 'scroll', function(){
     $stickyBanner.css({'position': "relative", top: "0px"});
     $projects.css('margin-top', '0');
   }
-  if ($window.scrollTop() >= 50) { // 55px is linkedin logo's height
+  if ($window.scrollTop() >= 81) {
     $socialIcons.css('display', 'none');
     $whiteIcons.css('display', 'inline');
   } else {

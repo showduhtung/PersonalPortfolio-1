@@ -13,7 +13,8 @@ export default class Skills extends React.Component  {
   render() {
     return (
       <section className="skills">
-        <svg width="920" height="1000" id="skills"></svg>
+        <h3 id="skills">Skills</h3>
+        <svg width="960" height="1000"></svg>
       </section>)
   }
 }

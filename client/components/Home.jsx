@@ -111,9 +111,7 @@ export default class Home extends React.Component {
         <Skills/>
         <Resume/>
         <About id="about"/>
-        <div id="backgroundObjects">
-          <img id="wzt" src="wztBackground.png"></img>
-        </div>
       </div>)
   }
 }
+
