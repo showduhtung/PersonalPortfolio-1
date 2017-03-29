@@ -3,9 +3,9 @@
 $textColor: #232323;
 $navColor: #232323;
 $headlineFont: 'Unica One';
-$border: solid 0.1em white;
+$border: solid 0.1em #232323;
 $borderRadius: 10px;
-//Unica+One|Quicksand
+//Open+Sans|Unica+One|Oleo+Script:700|Quicksand
 // #232323 gray
 
 ::-webkit-scrollbar {
@@ -84,6 +84,9 @@ a {
     text-align: center;
     bottom: 35%;
     margin: 0;
+  }
+  .scrollDown.animated {
+    margin-bottom: 0.8em;
   }
 }
 
@@ -169,6 +172,7 @@ iframe {
   margin-top: 1em;
   margin-bottom: 2em;
   border: $border;
+  border-width: 0.25em;
   border-radius: $borderRadius;
 }
 
